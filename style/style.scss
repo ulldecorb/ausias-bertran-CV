@@ -1,0 +1,207 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin size( $height, $width) {
+    height: $height;
+    width: $width;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    @include flex(column, flex-start, center);
+    height: 1754px;
+    width: 1240px;
+    padding: 10px;
+    border: 2px solid red;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    color: orange;
+    margin-bottom: 5px
+}
+
+.header {
+    @include flex(row, space-between, flex-start);
+    @include size( 15%, 100% );
+    // margin: 20px;
+    
+    &__main{
+        @include flex(column, center, center);
+        @include size( 100%, 50%);
+    }
+
+    &__title {
+        font-size: 2.5em;
+    }
+
+    &__subtitle {
+        font-size: 1.8em;
+    }
+
+    &__personal {
+        .personal {
+            &__icon {
+                @include size (20px, 20px);
+                margin: 5px 0;
+            }
+        }
+    }
+
+}
+
+.about-me {
+    margin: 0 20px;
+    padding: 20px;
+    @include size( 8%, 90% ); 
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+}
+
+.experience {
+    margin: 0 20px;
+    padding: 20px;
+    @include size( 40%, 90% );    
+}
+.language {
+    margin: 0 20px;
+    padding: 20px;
+    @include size( 10%, 90% );    
+}
+    
+.skills {
+    @include flex( column, center, center);
+    cursor:pointer;
+
+    &__box {
+        @include flex(row, center, flex-start);
+    }
+    
+    
+
+    &__box-list {
+        padding: 2vmin;
+        width: 33.33%;
+        display: flex;
+        // border:1px solid red;
+        @include flex (column, flex-start, center);
+        
+        ul {
+            @include flex (row, center, center);
+            flex-wrap: wrap;
+            width:20vw;
+            margin:0;
+
+            li {
+                @include flex(column, center, center);
+                padding: 0.5vmin;
+                width: 5vw ;
+                height: 6.5vw;
+                border-radius: 0.5vw;
+
+                &:hover {
+                    background-color: #E79C10;
+                    figcaption {
+                        color: #444;
+                    }
+                }
+                
+                img {
+                    width: 5vw;
+                    height: 4.5vw;
+                }
+                
+                figcaption {
+                    color: red;
+                    width: 5vw;
+                    height: calc(5vw / 3);
+                    font-size: calc(0.45em + 0.45vw);
+                    text-align: center;
+                }
+
+                .li {
+
+                    &__icon {
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// article:first-child {
+//     margin-top: 25vh;
+// }
+
+// article:last-child {
+//     margin-bottom: 10vh;
+// }
+
+
+// .contact {
+// position: fixed;
+// bottom: 0;
+// left: 0;
+// height:6vh;
+// width: 100vw;
+// background-color: #D53A33;
+// @include flex (row, center, center);
+// overflow: hidden;
+
+// &__list{
+//     @include flex (row, center, center);
+    
+//     * {
+//         color: rgb(255, 255, 0);
+//         padding: 0 1vmin;
+//     }
+
+//     a {
+//         height: 2vmin;
+//         width: 2vmin;
+//         cursor: pointer;
+//     }
+
+//     .mail-icon {
+//         height: 4vmin;
+//         width: 2vmin;
+//         background-image: url('../assets/gmail-icon.svg');
+//         background-size: cover;
+//         background-position: center;
+//     }
+
+//     .cv-icon {
+//         height: 4vmin;
+//         width: 2vmin;
+//         background-image: url('../assets/cv.svg');
+//         background-size: cover;
+//         background-position: center;
+//     }
+
+//     .linkedin-icon {
+//         height: 4vmin;
+//         width: 2vmin;
+//         background-image: url('../assets/linkedin-icon.svg');
+//         background-size: cover;
+//         background-position: center;
+//     }
+
+//     .github-icon {
+//         height: 4vmin;
+//         width: 2vmin;
+//         background-image: url('../assets/github-icon.svg');
+//         background-size: cover;
+//         background-position: center;
+//     }
+// }}
