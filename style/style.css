@@ -59,9 +59,9 @@ a {
 }
 
 .header__photo {
-  margin-left: 40px;
-  height: 160px;
-  width: 160px;
+  height: 210px;
+  width: 210px;
+  margin-left: 10px;
   border-radius: 50%;
   background-image: url("../assets/Ausias-Bertran-Full-Stack-Developer-portaint.jpeg");
   background-position: center;
@@ -95,19 +95,94 @@ a {
 }
 
 .header__subtitle {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
-.header__personal .personal__icon {
-  height: 20px;
-  width: 20px;
+.header__personal {
+  height: 100%;
+  width: 40%;
+}
+
+.header__personal a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__personal div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__personal .personal__phone-icon {
+  height: 1.5rem;
+  width: 1.5rem;
   background-image: url("../assets/contact_phone.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-right: 5px;
+}
+
+.header__personal .personal__mail-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("../assets/gmail-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.header__personal .personal__linkedin-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("../assets/linkedin-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.header__personal .personal__github-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("../assets/github-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.header__personal .personal__location-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("../assets/location.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 5px;
 }
 
 .about-me {

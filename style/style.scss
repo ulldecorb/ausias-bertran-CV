@@ -39,16 +39,14 @@ a {text-decoration: none;}
     padding: 30px 20px 10px 20px;
     
     &__photo {
-        margin-left: 40px;
-
-        @include size(160px, 160px);
+        @include size(210px, 210px);
+        margin-left: 10px;
         border-radius: 50%;
         background-image: url("../assets/Ausias-Bertran-Full-Stack-Developer-portaint.jpeg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         filter: grayscale(100%);
-
     }
 
     &__main{
@@ -62,22 +60,66 @@ a {text-decoration: none;}
     }
 
     &__subtitle {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     &__personal {
-        .personal {
-            &__icon {
-                @include size (20px, 20px);
-            }
+        @include size( 100%, 40%);
 
+        a {
+            @include flex(row, flex-start, center);
+        }
+        div {@include flex(row, flex-start, center);}
+
+        .personal {
+            
             &__phone-icon {
+                @include size (1.5rem, 1.5rem);
                 background-image: url("../assets/contact_phone.svg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                // height: 20px;
+                margin-right: 5px;
             }
+
+            
+            &__mail-icon {
+                @include size (1.5rem, 1.5rem);
+                background-image: url("../assets/gmail-icon.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 5px;
+            }
+
+            &__linkedin-icon {
+                @include size (1.5rem, 1.5rem);
+                background-image: url("../assets/linkedin-icon.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 5px;
+            }
+
+            &__github-icon {
+                @include size (1.5rem, 1.5rem);
+                background-image: url("../assets/github-icon.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 5px;
+            }
+
+            &__location-icon {
+                @include size (1.5rem, 1.5rem);
+                background-image: url("../assets/location.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 5px;
+            }
+
+
         }
     }
 
