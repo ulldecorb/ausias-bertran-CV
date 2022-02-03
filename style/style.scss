@@ -20,7 +20,7 @@ body {
     @include flex(column, flex-start, center);
     @include size( 1754px, 1240px);
     padding: 10px;
-    border: 2px solid red;
+    // border: 2px solid red;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -140,7 +140,9 @@ a {
 
 .box {
     @include flex (row, flex-start, flex-start);
-    @include size (90%, 90%);
+    @include size (45%, 90%);
+    border-bottom: 2px solid orange;
+
     
     &__left {
         @include flex (column, flex-start, flex-start);
@@ -221,64 +223,40 @@ a {
 }
     
 .skills {
+    @include size(30%, 90%);
     @include flex( column, center, center);
     // cursor:pointer;
     border-top: 2px solid orange;
 
     &__box {
-        @include flex(row, center, flex-start);
-    }
-    
-    
-
-    &__box-list {
-        padding: 2vmin;
-        width: 33.33%;
-        display: flex;
-        border:1px solid red;
-        @include flex (column, flex-start, center);
+        // @include flex(row, center, flex-start);
         
-        ul {
+        // ul {
             @include flex (row, center, center);
             flex-wrap: wrap;
-            width:20vw;
+            width:100%;
             margin:0;
 
-            li {
-                @include flex(column, center, center);
-                padding: 0.5vmin;
-                width: 5vw ;
-                height: 6.5vw;
-                border-radius: 0.5vw;
-
-                &:hover {
-                    background-color: #E79C10;
-                    figcaption {
-                        color: #444;
-                    }
-                }
+            figure {
+                @include flex(column, flex-end, center);
+                width: 50px ;
+                height: 65px;
+                margin: 30px 30px;
                 
                 img {
-                    width: 5vw;
-                    height: 4.5vw;
+                    width: 80px;
+                    height: 72px;
                 }
                 
                 figcaption {
                     color: red;
-                    width: 5vw;
-                    height: calc(5vw / 3);
-                    font-size: calc(0.45em + 0.45vw);
+                    width: 80px;
+                    height: calc(80px / 3);
+                    font-size: 1.4rem;
+                    margin-top: 10px;
                     text-align: center;
                 }
-
-                .li {
-
-                    &__icon {
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-                }
             }
-        }
+        // }
     }
 }
