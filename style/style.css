@@ -211,8 +211,9 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 90%;
+  height: 45%;
   width: 90%;
+  border-bottom: 2px solid orange;
 }
 
 .box__left {
@@ -313,6 +314,8 @@ a {
 }
 
 .skills {
+  height: 30%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,52 +343,16 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.skills__box-list {
-  padding: 2vmin;
-  width: 33.33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid red;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.skills__box-list ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 20vw;
+  width: 100%;
   margin: 0;
 }
 
-.skills__box-list ul li {
+.skills__box figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,41 +360,28 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5vmin;
-  width: 5vw;
-  height: 6.5vw;
-  border-radius: 0.5vw;
+  width: 50px;
+  height: 65px;
+  margin: 30px 30px;
 }
 
-.skills__box-list ul li:hover {
-  background-color: #E79C10;
+.skills__box figure img {
+  width: 80px;
+  height: 72px;
 }
 
-.skills__box-list ul li:hover figcaption {
-  color: #444;
-}
-
-.skills__box-list ul li img {
-  width: 5vw;
-  height: 4.5vw;
-}
-
-.skills__box-list ul li figcaption {
+.skills__box figure figcaption {
   color: red;
-  width: 5vw;
-  height: calc(5vw / 3);
-  font-size: calc(0.45em + 0.45vw);
+  width: 80px;
+  height: calc(80px / 3);
+  font-size: 1.4rem;
+  margin-top: 10px;
   text-align: center;
-}
-
-.skills__box-list ul li .li__icon {
-  background-repeat: no-repeat;
-  background-position: center;
 }
 /*# sourceMappingURL=style.css.map */
