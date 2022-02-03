@@ -228,12 +228,12 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 90%;
-  width: 90%;
-  padding: 20px;
+  width: 35%;
+  padding: 20px 0;
   border-right: 2px solid orange;
 }
 
-.box__left {
+.box__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,8 +248,8 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 90%;
-  width: 90%;
-  padding: 20px;
+  width: 65%;
+  padding: 20px 0;
 }
 
 .experience {
@@ -259,9 +259,54 @@ a {
   width: 90%;
 }
 
-.language {
-  margin: 0 20px;
-  padding: 20px;
+.experience .company__working-period {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+  color: orange;
+}
+
+.experience .company__name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.experience .company__job-title {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.experience .company__txt {
+  margin-bottom: 10px;
+}
+
+.education {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid orange;
+}
+
+.education__knowledge {
+  margin-bottom: 10px;
+}
+
+.education__knowledge .knowledge__working-period {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: orange;
+}
+
+.education__knowledge .knowledge__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.education__knowledge .knowledge__center {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.languages {
   height: 10%;
   width: 90%;
 }
@@ -280,7 +325,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
+  border-top: 2px solid orange;
 }
 
 .skills__box {
