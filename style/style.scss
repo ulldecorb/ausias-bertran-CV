@@ -31,7 +31,11 @@ h2 {
 
 p {font-size: 1.5rem;}
 
-a {text-decoration: none;}
+a {
+    text-decoration: none; 
+    color:#000;
+    font-weight: 300
+}
 
 .header {
     @include flex(row, space-between, flex-start);
@@ -76,7 +80,7 @@ a {text-decoration: none;}
             
             &__phone-icon {
                 @include size (1.5rem, 1.5rem);
-                background-image: url("../assets/contact_phone.svg");
+                background-image: url("../assets/phone_icon.svg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -86,7 +90,7 @@ a {text-decoration: none;}
             
             &__mail-icon {
                 @include size (1.5rem, 1.5rem);
-                background-image: url("../assets/gmail-icon.svg");
+                background-image: url("../assets/email_icon.svg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -127,9 +131,9 @@ a {text-decoration: none;}
 }
 
 .about-me {
-    margin: 0 20px;
-    padding: 20px;
-    @include size( 13%, 90% ); 
+    margin: 20px 20px 0 20px;
+    padding: 20px 0 20px 0;
+    @include size( 15%, 90% ); 
     border-top: 2px solid orange;
     border-bottom: 2px solid orange;
 }
@@ -153,8 +157,7 @@ a {text-decoration: none;}
 }
 
 .experience {
-    margin: 0 20px;
-    padding: 20px;
+    padding: 0 15px;
     @include size( 40%, 90% );
     
     .company {
