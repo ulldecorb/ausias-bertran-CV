@@ -1,2 +1,2 @@
 # ausias-bertran-CV
-My Curriculum Vitae in HTML, CSS &amp; Javascript
+My Curriculum Vitae in HTML & SASS.
