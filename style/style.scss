@@ -140,15 +140,15 @@ a {text-decoration: none;}
     
     &__left {
         @include flex (column, flex-start, flex-start);
-        @include size (90%, 90%);
-        padding: 20px;
+        @include size (90%, 35%);
+        padding: 20px 0;
         border-right: 2px solid orange;
     }
     
-    &__left {
+    &__right {
         @include flex (column, flex-start, flex-start);
-        @include size (90%, 90%);
-        padding: 20px;
+        @include size (90%, 65%);
+        padding: 20px 0;
     }
 }
 
@@ -157,16 +157,70 @@ a {text-decoration: none;}
     padding: 20px;
     @include size( 40%, 90% );
     
+    .company {
+        &__working-period {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            color: orange;
+        }
+        
+        &__name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            // margin-bottom: 2px;
+        }
+        
+        &__job-title {
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+        
+        &__txt {
+            margin-bottom: 10px;
+        }
+    }
+    
+    
 }
-.language {
-    margin: 0 20px;
-    padding: 20px;
+
+.education {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid orange;
+    
+    &__knowledge {
+        margin-bottom: 10px;
+        
+        .knowledge {
+            
+            &__working-period{
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+                color: orange;
+            }
+            
+            &__title {
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 5px;
+            }
+            
+            &__center {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.languages {
     @include size( 10%, 90% );    
 }
     
 .skills {
     @include flex( column, center, center);
-    cursor:pointer;
+    // cursor:pointer;
+    border-top: 2px solid orange;
 
     &__box {
         @include flex(row, center, flex-start);
@@ -225,69 +279,3 @@ a {text-decoration: none;}
         }
     }
 }
-
-// article:first-child {
-//     margin-top: 25vh;
-// }
-
-// article:last-child {
-//     margin-bottom: 10vh;
-// }
-
-
-// .contact {
-// position: fixed;
-// bottom: 0;
-// left: 0;
-// height:6vh;
-// width: 100vw;
-// background-color: #D53A33;
-// @include flex (row, center, center);
-// overflow: hidden;
-
-// &__list{
-//     @include flex (row, center, center);
-    
-//     * {
-//         color: rgb(255, 255, 0);
-//         padding: 0 1vmin;
-//     }
-
-//     a {
-//         height: 2vmin;
-//         width: 2vmin;
-//         cursor: pointer;
-//     }
-
-//     .mail-icon {
-//         height: 4vmin;
-//         width: 2vmin;
-//         background-image: url('../assets/gmail-icon.svg');
-//         background-size: cover;
-//         background-position: center;
-//     }
-
-//     .cv-icon {
-//         height: 4vmin;
-//         width: 2vmin;
-//         background-image: url('../assets/cv.svg');
-//         background-size: cover;
-//         background-position: center;
-//     }
-
-//     .linkedin-icon {
-//         height: 4vmin;
-//         width: 2vmin;
-//         background-image: url('../assets/linkedin-icon.svg');
-//         background-size: cover;
-//         background-position: center;
-//     }
-
-//     .github-icon {
-//         height: 4vmin;
-//         width: 2vmin;
-//         background-image: url('../assets/github-icon.svg');
-//         background-size: cover;
-//         background-position: center;
-//     }
-// }}
