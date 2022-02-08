@@ -23,15 +23,17 @@ body {
   width: 1240px;
   padding: 10px;
   font-family: 'Ubuntu', sans-serif;
+  outline: 1px solid red;
 }
 
 h2 {
   color: orange;
   margin-bottom: 5px;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 a {
@@ -54,9 +56,10 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 15%;
+  height: 18%;
   width: 90%;
   padding: 30px 20px 10px 20px;
+  margin-top: 2vh;
 }
 
 .header__photo {
@@ -223,13 +226,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 90%;
+  height: 100%;
   width: 35%;
   padding: 20px 0;
   border-right: 2px solid orange;
@@ -283,7 +286,6 @@ a {
 .education {
   width: 100%;
   margin-bottom: 20px;
-  border-bottom: 2px solid orange;
 }
 
 .education__knowledge {
@@ -308,8 +310,11 @@ a {
 }
 
 .languages {
-  height: 10%;
-  width: 90%;
+  height: 19%;
+  width: 100%;
+  border-top: 2px solid orange;
+  margin: 1vh 0 1vh 0;
+  padding-top: 1vh;
 }
 
 .skills {
@@ -331,6 +336,11 @@ a {
   border-top: 2px solid orange;
 }
 
+.skills__title {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .skills__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,16 +349,16 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin: 0;
+  margin-top: 2vh;
 }
 
 .skills__box figure {
@@ -376,11 +386,22 @@ a {
 }
 
 .skills__box figure figcaption {
-  color: red;
   width: 80px;
   height: calc(80px / 3);
   font-size: 1.4rem;
   margin-top: 10px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
