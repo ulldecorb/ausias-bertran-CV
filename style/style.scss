@@ -10,6 +10,9 @@
     width: $width;
 }
 
+$main-color: rgb(92, 174, 228);
+$second-color: rgb(37, 107, 155);
+
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +24,11 @@ body {
     @include size( 1754px, 1240px);
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
-    outline: 1px solid red;
+    // outline: 1px solid red;
 }
 
 h2 {
-    color: orange;
+    color: $second-color;
     margin-bottom: 5px;
     font-size: 2rem
 }
@@ -137,21 +140,21 @@ a {
     margin: 20px 20px 0 20px;
     padding: 20px 0 20px 0;
     @include size( 15%, 90% ); 
-    border-top: 2px solid orange;
-    border-bottom: 2px solid orange;
+    border-top: 2px solid $main-color;
+    border-bottom: 2px solid $main-color;
 }
 
 .box {
     @include flex (row, flex-start, flex-start);
-    @include size (45%, 90%);
-    border-bottom: 2px solid orange;
+    @include size (46%, 90%);
+    border-bottom: 2px solid $main-color;
 
     
     &__left {
         @include flex (column, space-between, flex-start);
         @include size (100%, 35%);
         padding: 20px 0;
-        border-right: 2px solid orange;
+        border-right: 2px solid $main-color;
     }
     
     &__right {
@@ -169,7 +172,7 @@ a {
         &__working-period {
             font-size: 1.2rem;
             margin-bottom: 4px;
-            color: orange;
+            color: $main-color;
         }
         
         &__name {
@@ -193,7 +196,6 @@ a {
 
 .education {
     width: 100%;
-    margin-bottom: 20px;
     
     &__knowledge {
         margin-bottom:1.5vh;
@@ -203,11 +205,10 @@ a {
             &__working-period{
                 font-size: 1.2rem;
                 margin-bottom: 5px;
-                color: orange;
+                color: $main-color;
             }
             
             &__title {
-                // font-size: 1.5rem;
                 font-weight: 800;
                 margin-bottom: 5px;
             }
@@ -222,7 +223,7 @@ a {
 
 .languages {
     @include size( 19%, 100% );    
-    border-top: 2px solid orange;
+    border-top: 2px solid $main-color;
     margin: 1vh 0 1vh 0;
     padding-top: 1vh;
 }
@@ -230,7 +231,7 @@ a {
 .skills {
     @include size(30%, 90%);
     @include flex( column, center, center);
-    border-top: 2px solid orange;
+    border-top: 2px solid $main-color;
 
     &__title {
         align-self: flex-start;
@@ -240,7 +241,7 @@ a {
             @include flex (row, space-between, space-between);
             flex-wrap: wrap;
             width:100%;
-            margin-top: 2vh;
+            margin-top: 1.5vh;
 
             figure {
                 @include flex(column, flex-end, center);
