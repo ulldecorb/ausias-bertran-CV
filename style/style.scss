@@ -21,14 +21,16 @@ body {
     @include size( 1754px, 1240px);
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
+    outline: 1px solid red;
 }
 
 h2 {
     color: orange;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    font-size: 2rem
 }
 
-p {font-size: 1.5rem;}
+p {font-size: 1.7rem;}
 
 a {
     text-decoration: none; 
@@ -38,8 +40,9 @@ a {
 
 .header {
     @include flex(row, space-between, flex-start);
-    @include size( 15%, 90% );
+    @include size( 18%, 90% );
     padding: 30px 20px 10px 20px;
+    margin-top: 2vh;
     
     &__photo {
         @include size(210px, 210px);
@@ -122,11 +125,8 @@ a {
                 background-size: cover;
                 margin-right: 5px;
             }
-
-
         }
     }
-
 }
 
 .about-me {
@@ -144,8 +144,8 @@ a {
 
     
     &__left {
-        @include flex (column, flex-start, flex-start);
-        @include size (90%, 35%);
+        @include flex (column, space-between, flex-start);
+        @include size (100%, 35%);
         padding: 20px 0;
         border-right: 2px solid orange;
     }
@@ -190,7 +190,6 @@ a {
 .education {
     width: 100%;
     margin-bottom: 20px;
-    border-bottom: 2px solid orange;
     
     &__knowledge {
         margin-bottom: 10px;
@@ -218,7 +217,10 @@ a {
 }
 
 .languages {
-    @include size( 10%, 90% );    
+    @include size( 19%, 100% );    
+    border-top: 2px solid orange;
+    margin: 1vh 0 1vh 0;
+    padding-top: 1vh;
 }
     
 .skills {
@@ -226,11 +228,15 @@ a {
     @include flex( column, center, center);
     border-top: 2px solid orange;
 
+    &__title {
+        align-self: flex-start;
+    }
+
     &__box {
-            @include flex (row, center, center);
+            @include flex (row, space-between, space-between);
             flex-wrap: wrap;
             width:100%;
-            margin:0;
+            margin-top: 2vh;
 
             figure {
                 @include flex(column, flex-end, center);
@@ -244,12 +250,13 @@ a {
                 }
                 
                 figcaption {
-                    color: red;
+                    // color: red;
                     width: 80px;
                     height: calc(80px / 3);
                     font-size: 1.4rem;
                     margin-top: 10px;
-                    text-align: center;
+                    @include flex (column, center, center)
+                    // text-align: center;
                 }
             }
     }
