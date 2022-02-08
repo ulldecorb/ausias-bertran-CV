@@ -259,6 +259,30 @@ a {
   padding: 20px 0;
 }
 
+.education {
+  width: 100%;
+}
+
+.education__knowledge {
+  margin-bottom: 1.5vh;
+}
+
+.education__knowledge .knowledge__working-period {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #5caee4;
+}
+
+.education__knowledge .knowledge__title {
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.education__knowledge .knowledge__center {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
 .experience {
   padding: 0 15px;
   height: 40%;
@@ -282,30 +306,6 @@ a {
 
 .experience .company__txt {
   margin-bottom: 10px;
-}
-
-.education {
-  width: 100%;
-}
-
-.education__knowledge {
-  margin-bottom: 1.5vh;
-}
-
-.education__knowledge .knowledge__working-period {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: #5caee4;
-}
-
-.education__knowledge .knowledge__title {
-  font-weight: 800;
-  margin-bottom: 5px;
-}
-
-.education__knowledge .knowledge__center {
-  font-size: 1.2rem;
-  text-transform: uppercase;
 }
 
 .languages {
@@ -333,6 +333,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   border-top: 2px solid #5caee4;
+  margin-top: -2px;
 }
 
 .skills__title {
