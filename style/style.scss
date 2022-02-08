@@ -37,7 +37,10 @@ h3 {
     font-size:2rem;
 }
 
-p {font-size: 1.7rem;}
+p {
+    font-size: 1.7rem;
+    font-family: 'Open Sans', sans-serif;
+}
 
 a {
     text-decoration: none; 
@@ -264,5 +267,39 @@ a {
                     // text-align: center;
                 }
             }
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 80vh;
+    width: 100vw;
+    @include flex(row, center, flex-end);
+
+    &__print-button {
+        height: 4vh;
+        width: 8vw;
+        border-radius: 1vh;
+        color: red;
+        outline: 2vmin solid rgba(0, 0, 0, 0.281);
+        display: none;
+        font-size: 1.5rem;
+        margin-bottom: 3vh;
+        cursor: pointer;
+
+        &:hover {
+            outline: 2vmin solid rgba(0, 0, 0, 0.788);
+            color: white;
+            background-color: rgb(4, 199, 4);            
+        }
+    }
+    
+    &:hover {
+        .footer__print-button {
+            // color: yellow;
+            display: block;
+        }
     }
 }
