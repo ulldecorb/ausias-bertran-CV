@@ -30,6 +30,10 @@ h2 {
     font-size: 2rem
 }
 
+h3 {
+    font-size:2rem;
+}
+
 p {font-size: 1.7rem;}
 
 a {
@@ -56,13 +60,13 @@ a {
     }
 
     &__main{
-        @include flex(column, center, flex-start);
-        @include size( 100%, 50%);
+        @include flex(column, space-around, flex-start);
+        @include size( 100%, 40%);
         padding-left: 40px;
     }
 
     &__title {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
 
     &__subtitle {
@@ -169,7 +173,7 @@ a {
         }
         
         &__name {
-            font-size: 1.5rem;
+            // font-size: 1.5rem;
             font-weight: 800;
             // margin-bottom: 2px;
         }
@@ -192,7 +196,7 @@ a {
     margin-bottom: 20px;
     
     &__knowledge {
-        margin-bottom: 10px;
+        margin-bottom:1.5vh;
         
         .knowledge {
             
@@ -203,7 +207,7 @@ a {
             }
             
             &__title {
-                font-size: 1.5rem;
+                // font-size: 1.5rem;
                 font-weight: 800;
                 margin-bottom: 5px;
             }
