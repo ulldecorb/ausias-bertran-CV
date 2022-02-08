@@ -32,6 +32,10 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 p {
   font-size: 1.7rem;
 }
@@ -83,19 +87,18 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   height: 100%;
-  width: 50%;
+  width: 40%;
   padding-left: 40px;
 }
 
 .header__title {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .header__subtitle {
@@ -270,7 +273,6 @@ a {
 }
 
 .experience .company__name {
-  font-size: 1.5rem;
   font-weight: 800;
 }
 
@@ -289,7 +291,7 @@ a {
 }
 
 .education__knowledge {
-  margin-bottom: 10px;
+  margin-bottom: 1.5vh;
 }
 
 .education__knowledge .knowledge__working-period {
@@ -299,7 +301,6 @@ a {
 }
 
 .education__knowledge .knowledge__title {
-  font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 5px;
 }
