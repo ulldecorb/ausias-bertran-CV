@@ -49,42 +49,60 @@ a {
 }
 
 .header {
-    @include flex(row, space-between, flex-start);
+    @include flex(row, flex-start, flex-start);
     @include size( 18%, 90% );
-    padding: 30px 20px 10px 20px;
+    padding: 30px 20px 10px 0;
     margin-top: 2vh;
     
     &__photo {
-        @include size(210px, 210px);
+        @include size(270px, 270px);
         margin-left: 10px;
         border-radius: 50%;
-        background-image: url("../assets/Ausias-Bertran-Full-Stack-Developer-portaint.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: grayscale(100%);
+        overflow: hidden;
+
+        .photo {
+            margin-top: -20px;
+            height: 370px;
+        }
     }
 
     &__main{
-        @include flex(column, space-around, flex-start);
-        @include size( 100%, 40%);
+        @include flex(column, center, flex-start);
         padding-left: 40px;
+        height: 240px;
+        margin-top: 50px;
     }
 
     &__title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
-
+    
     &__subtitle {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
+    &__location {
+        @include flex(row, flex-start ,center );
+        margin-top: 10px;
+        
+        .location-icon {
+            @include size (1.5rem, 1.5rem);
+            background-image: url("../assets/location.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 5px;
+        }
+    }
+    
     &__personal {
         @include size( 100%, 40%);
+        @include flex(row, space-around, flex-start);
+        margin-top: 15px;
 
         a {
             @include flex(row, flex-start, center);
-            margin-bottom: 5px;
+            margin-left: 5px;
         }
         div {@include flex(row, flex-start, center);}
 
@@ -138,18 +156,78 @@ a {
     }
 }
 
+.about-skills-box {
+    display: flex;
+    margin-top: 100px;
+}
+
+.headerLine {
+    width: 50px;
+    height: 8px;
+    background-color: $main-color;
+    align-self: flex-start;
+    margin: 2px;
+}
+
 .about-me {
-    margin: 20px 20px 0 20px;
-    padding: 20px 0 20px 0;
+    margin: 0 20px 0 40px;
+    padding: 0 0 20px 0;
     @include size( 15%, 90% ); 
-    border-top: 2px solid $main-color;
-    border-bottom: 2px solid $main-color;
+    // border-top: 2px solid $main-color;
+    // border-bottom: 2px solid $main-color;
+
+    &__txt {
+        width: 95%;
+    }
+}
+
+
+.skills {
+    // @include size(30%, 90%);
+    @include flex( column, center, center);
+    // height: 100%;
+    width: 100%;
+    // border-top: 2px solid $main-color;
+    // margin-top: -2px;
+
+    &__title {
+        align-self: flex-start;
+    }
+
+    &__box {
+            @include flex (row, space-between, space-between);
+            flex-wrap: wrap;
+            width:100%;
+            margin-top: 1.5vh;
+
+            figure {
+                @include flex(column, flex-end, center);
+                width: 40px ;
+                height: 65px;
+                margin: 30px 30px;
+                
+                img {
+                    width: 40px;
+                    height: 36px;
+                }
+                
+                figcaption {
+                    // color: red;
+                    width: 80px;
+                    height: calc(80px / 3);
+                    font-size: 1rem;
+                    // margin-top: 10px;
+                    @include flex (column, center, center)
+                    // text-align: center;
+                }
+            }
+    }
 }
 
 .box {
     @include flex (row, flex-start, flex-start);
     @include size (46%, 90%);
-    border-bottom: 2px solid $main-color;
+    // border-bottom: 2px solid $main-color;
 
     
     &__left {
@@ -225,51 +303,11 @@ a {
 
 .languages {
     @include size( 19%, 100% );    
-    border-top: 2px solid $main-color;
+    // border-top: 2px solid $main-color;
     margin: 1vh 0 1vh 0;
     padding-top: 1vh;
 }
     
-.skills {
-    @include size(30%, 90%);
-    @include flex( column, center, center);
-    border-top: 2px solid $main-color;
-    margin-top: -2px;
-
-    &__title {
-        align-self: flex-start;
-    }
-
-    &__box {
-            @include flex (row, space-between, space-between);
-            flex-wrap: wrap;
-            width:100%;
-            margin-top: 1.5vh;
-
-            figure {
-                @include flex(column, flex-end, center);
-                width: 50px ;
-                height: 65px;
-                margin: 30px 30px;
-                
-                img {
-                    width: 80px;
-                    height: 72px;
-                }
-                
-                figcaption {
-                    // color: red;
-                    width: 80px;
-                    height: calc(80px / 3);
-                    font-size: 1.4rem;
-                    margin-top: 10px;
-                    @include flex (column, center, center)
-                    // text-align: center;
-                }
-            }
-    }
-}
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -277,6 +315,7 @@ a {
     height: 80vh;
     width: 100vw;
     @include flex(row, center, flex-end);
+    display: none;  // hide while dev
 
     &__print-button {
         height: 4vh;
