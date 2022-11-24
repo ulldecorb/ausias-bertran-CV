@@ -49,42 +49,60 @@ a {
 }
 
 .header {
-    @include flex(row, space-between, flex-start);
+    @include flex(row, flex-start, flex-start);
     @include size( 18%, 90% );
-    padding: 30px 20px 10px 20px;
+    padding: 30px 20px 10px 0;
     margin-top: 2vh;
     
     &__photo {
-        @include size(210px, 210px);
+        @include size(270px, 270px);
         margin-left: 10px;
         border-radius: 50%;
-        background-image: url("../assets/Ausias-Bertran-Full-Stack-Developer-portaint.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: grayscale(100%);
+        overflow: hidden;
+
+        .photo {
+            margin-top: -20px;
+            height: 370px;
+        }
     }
 
     &__main{
-        @include flex(column, space-around, flex-start);
-        @include size( 100%, 40%);
+        @include flex(column, center, flex-start);
         padding-left: 40px;
+        height: 240px;
+        margin-top: 50px;
     }
 
     &__title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
-
+    
     &__subtitle {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
+    &__location {
+        @include flex(row, flex-start ,center );
+        margin-top: 10px;
+        
+        .location-icon {
+            @include size (1.5rem, 1.5rem);
+            background-image: url("../assets/location.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 5px;
+        }
+    }
+    
     &__personal {
         @include size( 100%, 40%);
+        @include flex(row, space-around, flex-start);
+        margin-top: 15px;
 
         a {
             @include flex(row, flex-start, center);
-            margin-bottom: 5px;
+            margin-left: 5px;
         }
         div {@include flex(row, flex-start, center);}
 
