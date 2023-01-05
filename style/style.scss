@@ -159,6 +159,7 @@ a {
 .about-skills-box {
     display: flex;
     margin-top: 100px;
+    align-items: flex-start;
 }
 
 .headerLine {
@@ -182,7 +183,7 @@ a {
 }
 
 
-.skills {
+.tech {
     // @include size(30%, 90%);
     @include flex( column, center, center);
     // height: 100%;
@@ -190,9 +191,11 @@ a {
     // border-top: 2px solid $main-color;
     // margin-top: -2px;
 
-    &__title {
+    &__title, h4, ul {
         align-self: flex-start;
     }
+
+
 
     &__box {
             @include flex (row, space-between, space-between);
@@ -205,7 +208,7 @@ a {
                 width: 40px ;
                 height: 65px;
                 margin: 30px 30px;
-                
+                 
                 img {
                     width: 40px;
                     height: 36px;
@@ -234,7 +237,7 @@ a {
         @include flex (column, space-between, flex-start);
         @include size (100%, 35%);
         padding: 20px 0;
-        border-right: 2px solid $main-color;
+        // border-right: 2px solid $main-color;
     }
     
     &__right {
@@ -272,10 +275,25 @@ a {
 }
 
 .experience {
-    padding: 0 15px;
-    @include size( 40%, 90% );
+    // padding: 0 15px;
+    // @include size( 40%, 90% );
     
+    &__company {
+        outline: 2px solid rgba(128, 128, 128, 0.619);
+        border-radius: 15px;
+        padding: 3vmin;
+        margin: 40px auto;
+        display: flex;
+    }
     .company {
+        &__box {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            padding: 0 15px;
+            border-left: 1px solid gray;
+        }
+
         &__working-period {
             font-size: 1.2rem;
             margin-bottom: 4px;
@@ -301,11 +319,11 @@ a {
     
 }
 
-.languages {
-    @include size( 19%, 100% );    
+.article {
+    // @include size( 19%, 100% );    
     // border-top: 2px solid $main-color;
-    margin: 1vh 0 1vh 0;
-    padding-top: 1vh;
+    // margin: 1vh 0 1vh 0;
+    margin-bottom: 50px;
 }
     
 .footer {
