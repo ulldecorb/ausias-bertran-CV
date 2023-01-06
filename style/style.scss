@@ -21,7 +21,8 @@ $second-color: rgb(37, 107, 155);
 
 body {
     @include flex(column, flex-start, center);
-    @include size( 1754px, 1240px);
+    // @include size( 1754px, 1240px);
+    @include size( 100vw, auto);
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
     // outline: 1px solid red;
@@ -51,6 +52,8 @@ a {
 .header {
     @include flex(row, flex-start, flex-start);
     @include size( 18%, 90% );
+    // display: flex;
+    width:1000px;
     padding: 30px 20px 10px 0;
     margin-top: 2vh;
     
@@ -160,6 +163,7 @@ a {
     display: flex;
     margin-top: 100px;
     align-items: flex-start;
+    width:1200px;
 }
 
 .headerLine {
@@ -182,7 +186,6 @@ a {
     }
 }
 
-
 .tech {
     // @include size(30%, 90%);
     @include flex( column, center, center);
@@ -194,8 +197,6 @@ a {
     &__title, h4, ul {
         align-self: flex-start;
     }
-
-
 
     &__box {
             @include flex (row, space-between, space-between);
@@ -248,7 +249,7 @@ a {
 }
 
 .education {
-    width: 100%;
+    width: 1200px;
     
     &__knowledge {
         margin-bottom:1.5vh;
@@ -277,6 +278,7 @@ a {
 .experience {
     // padding: 0 15px;
     // @include size( 40%, 90% );
+    width:1200px;
     
     &__company {
         outline: 2px solid rgba(128, 128, 128, 0.619);
@@ -286,6 +288,12 @@ a {
         display: flex;
     }
     .company {
+        &__logo {
+            width: 150px;
+            max-height: 150px;
+            border-radius: 8px;
+        }
+        
         &__box {
             display: flex;
             flex-direction: column;
