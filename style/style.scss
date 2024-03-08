@@ -58,6 +58,8 @@ a {
     margin-top: 2vh;
     
     &__photo {
+        display: flex;
+        justify-content: center;
         @include size(270px, 270px);
         margin-left: 10px;
         border-radius: 50%;

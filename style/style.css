@@ -48,6 +48,8 @@ a {
   margin-top: 2vh;
 }
 .header__photo {
+  display: flex;
+  justify-content: center;
   height: 270px;
   width: 270px;
   margin-left: 10px;
